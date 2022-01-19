@@ -4,9 +4,9 @@ const Navbar = () => {
     return (
         <nav className='navbar navbar-dark bg-dark'>
            <div className='container'>
-             <NavLink className='btn btn-outline-primary' to = '/'>Inicio</NavLink>
-             <NavLink className='btn btn-outline-primary' to = '/contacto' >Contacto</NavLink>
-             <NavLink className='btn btn-outline-primary' to = '/blog' >Blog</Link>
+             <NavLink  to = '/' className='btn btn-outline-primary'>Inicio</NavLink>
+             <NavLink  to = '/contacto' className='btn btn-outline-primary' >Contacto</NavLink>
+             <NavLink  to = '/blog'className='btn btn-outline-primary' >Blog</NavLink>
            </div>
         </nav>
     )
