@@ -1,14 +1,15 @@
-import NavBar from "./components/Navbar";
+import Navbar from "./components/Navbar";
+import { Outlet } from "react-router";
 
-function App() {
+
+const App=  () => {
   return (
-    <div className="App">
-      <header className="App-header">
-       
-        <NavBar></NavBar>
-        <h1>App</h1>
-      </header>
-    </div>
+    <div>
+            <Navbar />
+            <div className="container">
+                <Outlet />
+            </div>
+        </div>
   );
 }
 

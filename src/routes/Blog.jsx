@@ -16,7 +16,7 @@ const Blog = () => {
            <h1>Blog</h1> 
            {data.map((item)=> (
 
-               <h4 key = {item.id}>
+               <h4 key = {item.id}>{/* para k vaya al id correspondiente y luego añadimos el link para el ancla */}
                    <Link to ={ `/blog/ ${item.id}`}>{item.id} - {item.title}</Link>
                     
                </h4>
