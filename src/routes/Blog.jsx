@@ -6,20 +6,21 @@ const Blog = () => {
     const{data,error,loading} = useFetch('https://jsonplaceholder.typicode.com/posts');
 
     if (loading){
-        return<h1>Loading....</h1>;
+        return<h2>Loading....</h2>;
     }
-    if (error){
-        return<h1>{error}</h1>
+    if (error !== " "){
+        return<h2>{error}</h2>
     }
-    
-    
-    
     return (
         <div>
            <h1>Blog</h1> 
-           {data.map((item)=> {
-               <Link to = {`/blog/${item.id}`}>{item.id} - {item.title} </Link>
-           })}
+           {data.map((item)=> (
+
+               <h4 key = {item.id}>
+                   <Link to ={ `/blog/ ${item.id}`}>{item.id} - {item.title}</Link>
+                    
+               </h4>
+               ))}
         </div>
     )
 }
