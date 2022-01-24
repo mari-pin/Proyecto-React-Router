@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
-import { useFetch } from '../components/hooks/useFetch';
+import { useFetch } from '../hooks/useFetch';
 
 const Blog = () => {
 
@@ -28,11 +27,11 @@ const Blog = () => {
     return (
         <div>
            <h1>Blog</h1> 
-           <input 
-            type="text" 
-            className='form-control mb-2'
-            value = {searchParams.get("filter")|| ""}
-            onChange = {handleChange}
+           <input
+                className="form-control mb-2"
+                type="text"
+                value={searchParams.get("filter") || ""}
+                onChange={handleChange}
             />
            {data
             .filter(item => {
@@ -47,7 +46,7 @@ const Blog = () => {
            .map((item)=> (
 
                <h4 key = {item.id}>{/* para k vaya al id correspondiente y luego añadimos el link para el ancla */}
-                   <Link to ={ `/blog/ ${item.id}`}>
+                   <Link to = { `/blog/${item.id}`}>
                        {item.id} - {item.title}
                    </Link>
                     

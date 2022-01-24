@@ -1,6 +1,6 @@
 
 import { useParams } from 'react-router-dom';
-import { useFetch } from '../components/hooks/useFetch';
+import { useFetch } from '../hooks/useFetch';
 
 const Post = () => {
     let params = useParams();
@@ -15,7 +15,7 @@ const Post = () => {
     
     }
   return(
-    <div>
+        <div>
             <h1>
                 {data.id} - {data.title}
             </h1>
